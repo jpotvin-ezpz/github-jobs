@@ -1,0 +1,34 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #f6f7fb;
+}
+
+.github-header {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.github-header .bold-text {
+  font-weight: 700;
+}
+
+.search-bar--wrapper {
+  background-size: cover;
+  background-position: center;
+}
+
+.company-logo {
+  width: 100px;
+  border-radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=index.css.map */

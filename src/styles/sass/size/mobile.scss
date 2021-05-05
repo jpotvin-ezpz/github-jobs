@@ -1,0 +1,30 @@
+$primary-font: "Poppins", sans-serif;
+$alt-font: "Roboto", sans-serif;
+$bg-color: #f6f7fb;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $bg-color;
+}
+
+.github-header {
+  font-family: $primary-font;
+  font-size: 2.4rem;
+  font-weight: 300;
+  .bold-text {
+    font-weight: 700;
+  }
+}
+
+.search-bar--wrapper {
+  background-size: cover;
+  background-position: center;
+}
+
+.company-logo {
+  width: 100px; // TEMP
+  border-radius: 4px;
+}
