@@ -13,10 +13,14 @@ const JobSearch = () => {
       </span>
       <input 
         className='search-input'
-        placeholder="Title, companies, expertise"
+        placeholder="Title, companies, expertise or benefits"
       />
       </div>
-      <input type='submit' value='Search'></input>
+      <input 
+        className='search-btn'
+        type='submit' 
+        value='Search'
+        ></input>
     </form>
   </div>
   );

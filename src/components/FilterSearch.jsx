@@ -7,14 +7,18 @@ import JobList from "./JobList";
 
 const FilterSearch = ({ jobsData }) => {
   return (
-    <div className="main-wrapper">
-      <div className="filter-search--wrapper">
-        <JobSearch />
-        <FullTimeToggle />
-        <LocationSearch />
-        <DefaultLocales />
+    <div>
+      <JobSearch />
+      <div className="main-content--wrapper">
+        <div className="filter-search--wrapper">
+          <FullTimeToggle />
+          <LocationSearch />
+          <DefaultLocales />
+        </div>
+        <div className="job-list--wrapper">
+          <JobList jobsData={jobsData} />
+        </div>
       </div>
-      <JobList jobsData={jobsData} />
     </div>
   );
 };

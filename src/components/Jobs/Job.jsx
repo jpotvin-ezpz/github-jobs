@@ -9,16 +9,17 @@ const Job = ({
   createdAt,
 }) => {
   const sincePosted = timeSince(createdAt);
-
+  console.log(jobLogo)
   return (
     <div className="job">
-      <div className="logo-title--wrapper">
-        <img src={jobLogo} alt="company logo" className="company-logo" />
-        <div className="company--wrapper">
-          <h2 className="company-name-header">{companyName}</h2>
-          <h1 className="job-title">{jobTitle}</h1>
-          <p className="fulltime-parttime">{jobType}</p>
-        </div>
+      <div
+        className='company-logo'
+        style={{ backgroundImage: `url(${jobLogo})`}}
+      />
+      <div className="company--wrapper">
+        <h2 className="company-name-header">{companyName}</h2>
+        <h1 className="job-title">{jobTitle}</h1>
+        <p className="fulltime-parttime">{jobType}</p>
         <div className="location-creation--wrapper">
           <p className="location">
             <span className="material-icons">public</span>

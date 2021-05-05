@@ -1,6 +1,222 @@
-@use "./size/mobile.scss";
+$primary-font: "Poppins", sans-serif;
+$alt-font: "Roboto", sans-serif;
+$bg-color: #f6f7fb;
+$acc-blue: #1e86ff;
+$subtle-text: #b9bdcf;
+$font-color: #334680;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $bg-color;
+  margin: 12px;
+}
+
+// Header
+
+.github-header {
+  font-family: $primary-font;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: 32px;
+  .bold-text {
+    font-weight: 700;
+  }
+}
+
+.search-bar--wrapper {
+  background-size: cover;
+  background-position: center;
+  padding: 42px 18px;
+  border-radius: 8px;
+}
+
+.search-form {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .search-input {
+    width: 100%;
+    border: none;
+    padding-left: 10px;
+    color: $subtle-text;
+    font-size: 1.2rem;
+  }
+  .material-icons {
+    padding-left: 12px;
+    color: $subtle-text;
+  }
+}
+
+.search-btn {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-family: $alt-font;
+  font-weight: 500;
+  background: $acc-blue;
+  padding: 14px 27px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+}
+
+// Job Filters
+
+.fulltime-toggle {
+  display: flex;
+  align-items: center;
+  margin: 30px 14px;
+  font-size: 1.4rem;
+  color: $font-color;
+  font-family: $primary-font;
+  font-weight: 500;
+}
+
+.fulltime-label {
+  padding-left: 12px;
+}
+
+.location-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-header {
+  font-family: $primary-font;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $subtle-text;
+}
+
+.location-input--wrapper {
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 18px 14px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-size: 1.2rem;
+  .material-icons {
+    color: $subtle-text;
+  }
+  .location-input {
+    color: $subtle-text;
+    border: none;
+    width: 100%;
+    margin-left: 16px;
+    background: transparent;
+  }
+}
+
+.default-locales {
+  display: flex;
+  flex-direction: column;
+}
+
+.locale-label {
+  color: $font-color;
+  font-size: 1.4rem;
+  font-family: $primary-font;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  input {
+    background: $subtle-text;
+  }
+  > * {
+    padding: 0 12px;
+  }
+}
+
+// Job Listings
+
+.job {
+  font-family: $alt-font;
+  color: $font-color;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 24px 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.company-logo {
+  grid-column: 1 / 2;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 90px;
+  border-radius: 4px;
+}
+
+.company--wrapper {
+  grid-column: 2 / 4;
+}
+
+.company-name-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.job-title {
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
+.fulltime-parttime {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: 1px solid $font-color;
+  border-radius: 4px;
+  padding: 6px;
+  width: max-content;
+  margin-bottom: 32px;
+}
+
+.location-creation--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  color: $subtle-text;
+}
+
+.location,
+.since-posted {
+  display: flex;
+  align-items: center;
+  .material-icons {
+    margin-right: 5px;
+  }
+}
+
+@import "./size/tablet.scss";

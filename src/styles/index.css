@@ -1,15 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
   background: #f6f7fb;
+  margin: 12px;
 }
 
 .github-header {
   font-family: "Poppins", sans-serif;
   font-size: 2.4rem;
   font-weight: 300;
+  margin-bottom: 32px;
 }
 .github-header .bold-text {
   font-weight: 700;
@@ -18,17 +26,208 @@ body {
 .search-bar--wrapper {
   background-size: cover;
   background-position: center;
+  padding: 42px 18px;
+  border-radius: 8px;
+}
+
+.search-form {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-wrapper .search-input {
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+  color: #b9bdcf;
+  font-size: 1.2rem;
+}
+.input-wrapper .material-icons {
+  padding-left: 12px;
+  color: #b9bdcf;
+}
+
+.search-btn {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: #1e86ff;
+  padding: 14px 27px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+}
+
+.fulltime-toggle {
+  display: flex;
+  align-items: center;
+  margin: 30px 14px;
+  font-size: 1.4rem;
+  color: #334680;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.fulltime-label {
+  padding-left: 12px;
+}
+
+.location-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-header {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #b9bdcf;
+}
+
+.location-input--wrapper {
+  margin: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 18px 14px;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+.location-input--wrapper .material-icons {
+  color: #b9bdcf;
+}
+.location-input--wrapper .location-input {
+  color: #b9bdcf;
+  border: none;
+  width: 100%;
+  margin-left: 16px;
+  background: transparent;
+}
+
+.default-locales {
+  display: flex;
+  flex-direction: column;
+}
+
+.locale-label {
+  color: #334680;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.locale-label input {
+  background: #b9bdcf;
+}
+.locale-label > * {
+  padding: 0 12px;
+}
+
+.job {
+  font-family: "Roboto", sans-serif;
+  color: #334680;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 24px 0;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
 }
 
 .company-logo {
-  width: 100px;
+  grid-column: 1/2;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 90px;
   border-radius: 4px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.company--wrapper {
+  grid-column: 2/4;
+}
+
+.company-name-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.job-title {
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
+.fulltime-parttime {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: 1px solid #334680;
+  border-radius: 4px;
+  padding: 6px;
+  width: max-content;
+  margin-bottom: 32px;
+}
+
+.location-creation--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  color: #b9bdcf;
+}
+
+.location,
+.since-posted {
+  display: flex;
+  align-items: center;
+}
+.location .material-icons,
+.since-posted .material-icons {
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .input-wrapper {
+    width: 100%;
+    margin-right: 12px;
+  }
+
+  .main-content--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
+
+  .filter-search--wrapper {
+    grid-column: 1/2;
+  }
+
+  .job-list--wrapper {
+    grid-column: 2/4;
+    overflow-y: scroll;
+    height: 65vh;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

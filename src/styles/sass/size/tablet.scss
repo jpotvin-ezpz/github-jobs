@@ -1,0 +1,19 @@
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .input-wrapper {
+    width: 100%;
+    margin-right: 12px;
+  }
+  .main-content--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
+  .filter-search--wrapper {
+    grid-column: 1 / 2;
+  }
+  .job-list--wrapper {
+    grid-column: 2 / 4;
+    overflow-y: scroll;
+    height: 65vh;
+  }
+}
