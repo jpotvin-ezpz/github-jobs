@@ -1,0 +1,24 @@
+@media only screen and (min-width: 961px) {
+  .search-form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .input-wrapper {
+    width: 100%;
+    margin-right: 12px;
+  }
+  .search-btn {
+    padding: 14px 40px;
+  }
+  .main-content--wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 32px;
+  }
+  .filter-search--wrapper {
+    grid-column: 1 / 2;
+  }
+  .job-list--wrapper {
+    grid-column: 2 / 4;
+  }
+}

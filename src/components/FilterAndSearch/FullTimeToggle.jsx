@@ -1,6 +1,7 @@
 import React from "react";
 
-const FullTimeToggle = () => {
+const FullTimeToggle = ({setFullTime, fullTime}) => {
+
   return (
     <div className="fulltime-toggle">
         <input
@@ -9,6 +10,7 @@ const FullTimeToggle = () => {
           name="fulltime"
           id="fulltime"
           value="fulltime"
+          onClick={() => setFullTime(!fullTime)}
         />
       <label className="fulltime-label" htmlFor="fulltime">
         Full time

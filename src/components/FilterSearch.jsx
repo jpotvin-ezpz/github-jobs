@@ -5,18 +5,19 @@ import JobSearch from "./FilterAndSearch/JobSearch";
 import LocationSearch from "./FilterAndSearch/LocationSearch";
 import JobList from "./JobList";
 
-const FilterSearch = ({ jobsData }) => {
+const FilterSearch = ({ jobsData, setFullTime, fullTime, setLocale, setQuery, isLoading }) => {
   return (
     <div>
-      <JobSearch />
+      <JobSearch setQuery={setQuery}/>
       <div className="main-content--wrapper">
         <div className="filter-search--wrapper">
-          <FullTimeToggle />
-          <LocationSearch />
-          <DefaultLocales />
+          <FullTimeToggle setFullTime={setFullTime} fullTime={fullTime}/>
+          <LocationSearch setLocale={setLocale}/>
+          <DefaultLocales setLocale={setLocale}/>
         </div>
         <div className="job-list--wrapper">
-          <JobList jobsData={jobsData} />
+          { isLoading && <div className='loading'>Loading...</div>}
+          { jobsData && <JobList jobsData={jobsData} /> }
         </div>
       </div>
     </div>
