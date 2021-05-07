@@ -1,4 +1,26 @@
 @media only screen and (min-width: 961px) {
+  body {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  .job {
+    position: relative;
+    &:hover {
+      transform: rotate(0.005turn) scale(1.1);
+      box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.05);
+    }
+  }
+  .location-creation--wrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    > * {
+      margin-left: 25px;
+    }
+  }
+
   .search-form {
     width: 80%;
     margin: 0 auto;
@@ -20,5 +42,17 @@
   }
   .job-list--wrapper {
     grid-column: 2 / 4;
+  }
+  .job-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .link-apply--wrapper {
+    grid-column: 1 / 2;
+  }
+  .job-main--wrapper {
+    grid-column: 2 / 4;
+    height: 80vh;
+    overflow-y: scroll;
   }
 }

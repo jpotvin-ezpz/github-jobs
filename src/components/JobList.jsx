@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import Paginate from "./FilterAndSearch/Pagination";
 import Job from "./Jobs/Job";
 
 const JobList = ({ jobsData }) => {
-  const Jobs = jobsData.map((job) => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const perPage = 5;
+  const maxPages = Math.ceil(([...jobsData].length) / perPage);
+  const offset = currentPage * perPage;
+  const currentJobs = [...jobsData].slice(offset, offset + perPage);
+
+  const Jobs = currentJobs.map((job) => {
     return (
       <Job
         key={job.id}
+        jobID={job.id}
         jobLogo={job.company_logo}
         companyName={job.company}
         jobTitle={job.title}
@@ -15,7 +23,16 @@ const JobList = ({ jobsData }) => {
       />
     );
   });
-  return <div className="job-list">{Jobs}</div>;
+  return (
+    <div className="job-list">
+      {Jobs}
+      <Paginate 
+        setCurrentPage={setCurrentPage} 
+        currentPage={currentPage} 
+        maxPages={maxPages}
+      />
+    </div>
+  );
 };
 
 export default JobList;

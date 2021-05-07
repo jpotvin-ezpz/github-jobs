@@ -5,7 +5,7 @@ import JobSearch from "./FilterAndSearch/JobSearch";
 import LocationSearch from "./FilterAndSearch/LocationSearch";
 import JobList from "./JobList";
 
-const FilterSearch = ({ jobsData, setFullTime, fullTime, setLocale, setQuery, isLoading }) => {
+const Main = ({ jobsData, setFullTime, fullTime, setLocale, setQuery, isLoading }) => {
   return (
     <div>
       <JobSearch setQuery={setQuery}/>
@@ -24,4 +24,4 @@ const FilterSearch = ({ jobsData, setFullTime, fullTime, setLocale, setQuery, is
   );
 };
 
-export default FilterSearch;
+export default Main;

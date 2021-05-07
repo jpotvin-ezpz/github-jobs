@@ -18,7 +18,7 @@ const DefaultLocales = ({setLocale}) => {
         <span>London</span>
       </label>
       <label className="locale-label" htmlFor="washington">
-        <input type="radio" id="washington" name="city" value="washington" />
+        <input type="radio" id="washington" name="city" value="washington+dc" />
         <span>Washington D.C.</span>
       </label>
       <label className="locale-label" htmlFor="atlanta">

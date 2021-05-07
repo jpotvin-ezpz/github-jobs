@@ -160,13 +160,12 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   margin: 24px 0;
   padding: 12px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+  cursor: pointer;
+  transition-duration: 250ms;
 }
 
 .company-logo {
-  grid-column: 1 / 2;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -175,8 +174,14 @@ body {
   border-radius: 4px;
 }
 
+.logo--wrapper {
+  height: 90px;
+  width: 90px;
+  margin-right: 16px;
+}
+
 .company--wrapper {
-  grid-column: 2 / 4;
+  width: 100%;
 }
 
 .company-name-header {
@@ -191,7 +196,7 @@ body {
   margin-bottom: 14px;
 }
 
-.fulltime-parttime {
+.job-type {
   font-weight: 700;
   font-size: 1.2rem;
   border: 1px solid $font-color;
@@ -216,6 +221,89 @@ body {
   align-items: center;
   .material-icons {
     margin-right: 5px;
+  }
+}
+
+// Job Info
+.job-details {
+  color: $font-color;
+  font-family: $primary-font;
+  .link-apply--wrapper {
+    margin: 32px 0;
+  }
+  .back-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $acc-blue;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 16px 0;
+    span {
+      display: block;
+      padding-right: 10px;
+      font-size: 2.4rem;
+    }
+  }
+  .how-header {
+    color: $subtle-text;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 16px 0;
+  }
+  .how-text {
+    overflow-wrap: break-word;
+    font-size: 1.4rem;
+    a {
+      color: $acc-blue;
+    }
+  }
+}
+
+.job-main--wrapper {
+  .job-type {
+    margin-bottom: 10px;
+  }
+  .since-posted {
+    color: $subtle-text;
+    font-size: 1.2rem;
+    margin-bottom: 34px;
+  }
+}
+
+.job-logo-location--wrapper {
+  display: flex;
+  margin-bottom: 34px;
+  .job-logo {
+    width: 42px;
+    height: 42px;
+    background-size: contain;
+    background-position: center;
+    border-radius: 4px;
+  }
+}
+
+.company-location--wrapper {
+  font-family: $alt-font;
+  margin-left: 12px;
+  .company-name {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  .location {
+    color: $subtle-text;
+    font-size: 1.2rem;
+  }
+}
+
+.job-desc {
+  font-family: $alt-font;
+  font-size: 1.6rem;
+  p {
+    margin: 20px 0;
+  }
+  ul {
+    list-style-type: none;
   }
 }
 
