@@ -43,6 +43,7 @@
   .job-list--wrapper {
     grid-column: 2 / 4;
   }
+
   .job-details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -54,5 +55,11 @@
     grid-column: 2 / 4;
     height: 80vh;
     overflow-y: scroll;
+  }
+  .paginate--wrapper {
+    justify-content: flex-end;
+    > * {
+      margin: 0 12px;
+    }
   }
 }

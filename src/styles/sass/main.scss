@@ -307,5 +307,28 @@ body {
   }
 }
 
+.paginate--wrapper {
+  display: flex;
+  font-family: $alt-font;
+  justify-content: space-between;
+  align-items: center;
+  > * {
+    border: thin solid $subtle-text;
+    color: $subtle-text;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      border-color: $acc-blue;
+      color: $acc-blue;
+    }
+    &:active {
+      color: white;
+      background: $acc-blue;
+    }
+  }
+}
+
 @import "./size/tablet.scss";
 @import "./size/desktop.scss";

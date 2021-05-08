@@ -7,7 +7,7 @@ const Paginate = ({ setCurrentPage, currentPage, maxPages }) => {
     setCurrentPage(currentPage - 1);
   }
   const handleAddCurrentPage = () => {
-    if (currentPage > 8) return;
+    if (currentPage >= maxPages - 1) return;
     setCurrentPage(currentPage + 1);
   }
 

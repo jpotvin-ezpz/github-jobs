@@ -13,7 +13,12 @@
   }
   .job-list--wrapper {
     grid-column: 2 / 4;
+  }
+  .job-listings {
     overflow-y: scroll;
     height: 65vh;
+  }
+  .paginate--wrapper {
+    margin-top: 16px;
   }
 }
